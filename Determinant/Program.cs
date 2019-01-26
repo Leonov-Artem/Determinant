@@ -19,8 +19,8 @@ namespace Determinant
             Console.WriteLine();
 
             CalculateDeterminant determinant = new CalculateDeterminant(matrix);
-            double[,] minor = determinant.Minor(matrix, 0, 0);
-            Print(minor);
+            double det = determinant.Det();
+            Console.WriteLine($"Определитель матрицы = {det}");
 
             Console.ReadKey();
         }
@@ -30,7 +30,7 @@ namespace Determinant
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
-                    matrix[i, j] = random.Next(-13, 19); 
+                    matrix[i, j] = random.Next(-32, 32); 
             }
             Console.WriteLine();
         }
