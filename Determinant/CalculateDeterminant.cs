@@ -8,5 +8,13 @@ namespace Determinant
 {
     class CalculateDeterminant
     {
+        private double[] matrix;
+        private int Dimension { get; set; }
+
+        public CalculateDeterminant(double[] matrix)
+        {
+            this.matrix = matrix;
+            Dimension = matrix.Rank;
+        }
     }
 }
